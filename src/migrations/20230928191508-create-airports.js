@@ -1,7 +1,5 @@
 'use strict';
 /** @type {import('sequelize-cli').Migration} */
-const { City } = require('../models');
-const airport = require('../models/airport');
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Airports', {
@@ -27,7 +25,7 @@ module.exports = {
       },
       cityId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
