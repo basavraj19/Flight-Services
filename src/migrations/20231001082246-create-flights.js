@@ -11,7 +11,7 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       airoplaneId :{ 
         type :Sequelize.INTEGER,
@@ -22,17 +22,13 @@ module.exports = {
         },
         onDelete : 'CASCADE'
      },
-      arrivalDate: {
-        type: Sequelize.DATE
-      },
-      departureDate: {
-        type: Sequelize.DATE
+      departureTime: {
+        type: Sequelize.DATE,
+        allowNull: false
       },
       arrivalTime: {
-        type: Sequelize.TIME
-      },
-      departureTime: {
-        type: Sequelize.TIME
+        type: Sequelize.DATE,
+        allowNull: false
       },
       sourceAirportId: {
         type: Sequelize.STRING,
@@ -53,10 +49,12 @@ module.exports = {
         onDelete : 'CASCADE'
       },
       capacity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       price: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,

@@ -6,7 +6,7 @@ const {createAiroplane,deleteAiroplane,getAllAiroplanes,getAiroplane,updateData}
 
 const { Airoplanemiddleware} =require('../../middlewares');
 
-router.post('/',createAiroplane);
+router.post('/',Airoplanemiddleware.Validator,createAiroplane);
 
 router.delete('/:id',deleteAiroplane);
 
@@ -14,6 +14,6 @@ router.get('/',getAllAiroplanes);
 
 router.get('/:id',getAiroplane);
 
-router.patch('/',updateData)
+router.patch('/',updateData);
 
 module.exports =router;

@@ -1,3 +1,4 @@
 module.exports ={
-    Airoplanemiddleware :require('./airoplanevalidator')
+    Airoplanemiddleware :require('./airoplanevalidator'),
+    Flightmiddleware :require('./flightsmiddleware')
 }
