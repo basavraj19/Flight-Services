@@ -1,7 +1,7 @@
 'use strict';
 /** @type {import('sequelize-cli').Migration} */
 
-const {Enum}=require('../utils/comman');
+const {Enum}=require('../utils/common');
 
 const  {Business,Premium,Economy,FirstClass} =Enum.seatsCategory;
 

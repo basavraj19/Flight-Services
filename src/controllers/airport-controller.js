@@ -1,6 +1,6 @@
 const { AirportService } = require('../services');
 
-const { Successresponse, Errorrespones } = require('../utils/comman');
+const { Successresponse, Errorrespones } = require('../utils/common');
 
 const { StatusCodes } = require('http-status-codes');
 

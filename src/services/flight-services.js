@@ -129,11 +129,27 @@ async function getAllFlightsByfliters(query){
         throw new AppError('something went wrong',StatusCodes.INTERNAL_SERVER_ERROR);
      }
 }
+
+async function updateSeats(data)
+{
+    try {
+       const response =await Flights.updateRamainingSeats(data.flightId,data.seats,data.desc);
+       return response; 
+    } catch (error) {
+        console.log(error);
+        if(error.statuscode==StatusCodes.NOT_FOUND)
+        {
+            throw new AppError("Resource not found",StatusCodes.NOT_FOUND); 
+        }
+        throw new AppError('Somthing went wrong while updating seats in flights',StatusCodes.INTERNAL_SERVER_ERROR);
+    }
+}
 module.exports ={
     createFlight,
     deleteFlight,
     getAllFlights,
     getFlight,
     updateFlight,
-    getAllFlightsByfliters
+    getAllFlightsByfliters,
+    updateSeats
 }

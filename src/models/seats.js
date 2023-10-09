@@ -3,11 +3,10 @@ const {
   Model
 } = require('sequelize');
 
-const {Enum}=require('../utils/comman');
+const {Enum}=require('../utils/common');
 
 const  {Business,Premium,Economy,FirstClass} =Enum.seatsCategory;
 
-const { FOREIGNKEYS } = require('sequelize/types/query-types');
 module.exports = (sequelize, DataTypes) => {
   class Seats extends Model {
     /**

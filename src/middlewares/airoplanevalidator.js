@@ -1,6 +1,6 @@
 const AppError = require('../utils/error/AppError');
 
-const {Errorrespones}=require('../utils/comman');
+const {Errorrespones}=require('../utils/common');
 
 const {StatusCodes} =require('http-status-codes');
 

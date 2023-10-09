@@ -1,10 +1,10 @@
-const { Errorrespones }=require('../utils/comman');
+const { Errorrespones }=require('../utils/common');
 
 const {AppError}=require('../utils');
 
 const { StatusCodes } = require('http-status-codes');
 
-const { compareTime }=require('../utils/CommanHelper/datetimehelper');
+const { compareTime }=require('../utils/Helper/datetimehelper');
 
 function compare(req,res,next)
 {
