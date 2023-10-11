@@ -84,6 +84,7 @@ async function getAllFlightsByfliters(req, res) {
 }
 
 async function updateSeat(req,res) {
+    
     try {
         const response = await FlightServices.updateSeats({
             flightId : req.params.id,
