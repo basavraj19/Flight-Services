@@ -64,6 +64,8 @@ class FlightRepository extends CrudRepository {
         const transaction =await db.sequelize.transaction();
         try {
             await db.sequelize.query(addRowLock(flightId));
+            // add row lock will put lock on that particular row and that no two users can update the row at the same time 
+            // which helps to implement concurrent booking
             const flight = await flights.findByPk(flightId);
             if (parseInt(desc)) {
                 await flight.decrement('capacity', { by: seats },{transaction : transaction});
