@@ -12,8 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', router);
 
+app.use('/flightService/api',router);
+
 app.listen(serverconfig.PORT, async () => {
-    logger.info(`Successfully stated the server on PORT ${serverconfig.PORT}`);
+    //logger.info(`Successfully stated the server on PORT ${serverconfig.PORT}`);
     console.log(`Successfully stated the server on PORT ${serverconfig.PORT}`);
 });
 
